@@ -31,6 +31,6 @@ The offline verifier compares bytes, hashes, structured fields, and validated ev
 - GPT-Chaos bridge runs only documented local REA JavaScript/Electron and desktop-inspection commands. External REA behavior remains governed by its own tools and upstream policies.
 - An emergency stop in the existing GPT-Doug runtime is checked around worker processes; it does not remotely police every other tool.
 - No propagation, unsolicited target scanning, remote worker execution, license bypass, device installation, or automatic website publication.
-- PR #455 has local mock tests and a dedicated GitHub CI gate for Python and macOS. Real REA fixture execution must pass separately before declaring full integration operational.
+- PR #455 has 22 local mock tests, a dedicated Linux/macOS integration gate, and a passed real REA 6.7.0 synthetic-fixture smoke. The implementation remains subject to review before any production deployment. A real REA 6.7.0 synthetic-fixture check has passed in the companion PR, but full application coverage and production deployment remain unverified.
 
 The existing `experiments/omarchy-iphone/` static-audit work remains separate: it does not make Omarchy run natively on iPhone. This bridge is optional and does not assert a live iPhone connection.
